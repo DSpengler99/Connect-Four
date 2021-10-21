@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Daniel Spengler">
+    <meta name="description" content="A simple UI for the connect four game">
+    <title>Connect Four</title>
+    
+    <style>
+
+        * {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin: auto;
+            margin-top: 30px;
+            width: 50%;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 25px;
+        }
+
+        #game {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            width: 50%;
+        }
+
+        #board {
+            border: 2px solid black;
+            background-color:chocolate;
+        }
+
+        #board tr td {
+            width: 60px;
+            height: 60px;
+        }
+
+        .gameButton {
+            margin: 5px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        #columnButtons tr td {
+            width: 60px;
+            height: 60px;
+        }
+
+        .columnButton {
+            margin: 5px;
+            width: 50px;
+            height: 50px;
+            background-color: chocolate;
+            color: white;;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+
+        .first {
+            background-color: #0033cc;
+            color: white;
+        }
+
+        .second {
+            background-color: darkred;
+            color: white;
+        }
+
+        .optionButton {
+            margin: 5px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+
+        .undoButton {
+            background-color: #0033cc;
+            color: white;
+        }
+
+        .bestButton {
+            background-color: chocolate;
+            color: white;
+        }
+
+        .testButton {
+            background-color: chocolate;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>VIER GEWINNT</h1>
+    <div id="game">
+        <h2>Spielbeginn</h2>
+        <p>Wer soll das Spiel beginnen?</p>
+        <table align="center">
+            <tr>
+                <td><button class="optionButton first" onclick="startGameWithPlayer()">Ich beginne.</button></td>
+                <td><button class="optionButton second" onclick="startGameWithAI()">Der Computer beginnt.</button></td>
+                <td><button class="optionButton testButton" onclick="prepareTests()">Tests starten</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
